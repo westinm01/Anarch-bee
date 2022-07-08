@@ -8,6 +8,8 @@ public class Countdown : MonoBehaviour
 {
     public int currentTime;
     private float delta = 0;
+
+    public PauseGame eventSystemPauseGame;
     
     //[SerializeField]
     private TextMeshProUGUI timerText;
@@ -29,8 +31,11 @@ public class Countdown : MonoBehaviour
             delta = 0;
             currentTime--;
             timerText.text = currentTime.ToString();
-            if(currentTime == 0){
+            if(currentTime <= 0){
                 //call game over
+                
+                //also call gameOverScreen.
+                eventSystemPauseGame.Pause(1);
                 
             }
             
