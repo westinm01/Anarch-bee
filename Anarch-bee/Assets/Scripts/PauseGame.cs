@@ -11,13 +11,13 @@ public class PauseGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameIsPaused = !gameIsPaused;
             Pause();
         }
     }
     
-    void Pause()
+    public void Pause()
     {
+        gameIsPaused = !gameIsPaused;
         pauseMenu.SetActive(gameIsPaused);
         if(gameIsPaused)
         {
@@ -27,6 +27,10 @@ public class PauseGame : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+    public void setGameIsPaused(bool val)
+    {
+        gameIsPaused = val;
     }
 
 }
