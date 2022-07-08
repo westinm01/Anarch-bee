@@ -306,17 +306,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &231445946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1210984554863414503, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+  m_PrefabInstance: {fileID: 588686934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &233931771 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1297210859, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
   m_PrefabInstance: {fileID: 588686934}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 231445946}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96c35eb5567e9464fa71ff588a219dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &233931776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231445946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b2ecab6bedb5c479794f037549da0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles: {fileID: 243934700}
+  currentAmount: 0
 --- !u!1839735485 &243934700 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 6750226618051902087, guid: 5801c3ff840991b4581c02cbfa4be8c4, type: 3}
@@ -474,6 +493,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1935158975}
+    - target: {fileID: 1297210859, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1185840344}
     - target: {fileID: 1210984554863414503, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
       propertyPath: m_Name
       value: EventSystem
@@ -537,6 +560,10 @@ PrefabInstance:
       propertyPath: destructableTilemap
       value: 
       objectReference: {fileID: 243934700}
+    - target: {fileID: 958811704, guid: 5801c3ff840991b4581c02cbfa4be8c4, type: 3}
+      propertyPath: eventSystemTileCount
+      value: 
+      objectReference: {fileID: 233931776}
     - target: {fileID: 1818407625516539576, guid: 5801c3ff840991b4581c02cbfa4be8c4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -661,6 +688,11 @@ RectTransform:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6339660360340702518, guid: 435574cca5ff1354ab9614b0a554b5f3, type: 3}
   m_PrefabInstance: {fileID: 6439117682313374632}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1185840344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1389808531944764834, guid: 60aaa971d30cc7a42a2fa50dfdd7e0f9, type: 3}
+  m_PrefabInstance: {fileID: 2782756283304493403}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1234171409
 PrefabInstance:
@@ -1046,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6976823205442076789, guid: 88150ce6ca4108d4393fb34513059347, type: 3}
       propertyPath: m_text
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6976823205442076789, guid: 88150ce6ca4108d4393fb34513059347, type: 3}
       propertyPath: m_sharedMaterial
