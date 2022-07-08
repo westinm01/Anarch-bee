@@ -16,7 +16,7 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, minLeftPos, minRightPos), 
+        Vector3 mousePosition = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, minLeftPos, minRightPos),
             transform.position.y, 0f);
 
         transform.position = mousePosition;
