@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class BallLauncher : MonoBehaviour
@@ -9,6 +10,7 @@ public class BallLauncher : MonoBehaviour
     [SerializeField] float launchDelay = 0.5f;
 
     Boolean ballLaunched = false;
+    Boolean delayOver = true;
 
 
     void Update()
@@ -18,9 +20,10 @@ public class BallLauncher : MonoBehaviour
             transform.position = new Vector3(paddle.transform.position.x, paddle.transform.position.y + 1f, 0f);
         }
 
-        if(Input.GetKeyDown(KeyCode.B) || Input.GetMouseButtonDown(0))
+        if((Input.GetKeyDown(KeyCode.B) || Input.GetMouseButtonDown(0)) && delayOver)
         {
             LaunchBall();
+            StartCoroutine(DelayNextLaunch());
         }
     }
 
@@ -34,5 +37,12 @@ public class BallLauncher : MonoBehaviour
     public bool GetBallLaunched()
     {
         return ballLaunched;
+    }
+
+    IEnumerator DelayNextLaunch()
+    {
+        delayOver = false;
+        yield return new WaitForSeconds(launchDelay);
+        delayOver = true;
     }
 }
