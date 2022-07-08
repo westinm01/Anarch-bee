@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6989756819826924138}
   - component: {fileID: 6989756819826924139}
   - component: {fileID: 6989756819826924136}
+  - component: {fileID: 1993843327}
   m_Layer: 0
   m_Name: Paddle of Power
   m_TagString: Untagged
@@ -126,3 +127,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minLeftPos: -6.889
   minRightPos: 6.889
+--- !u!114 &1993843327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6989756819826924137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0003b4c88856f1345868ce003d0a7250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 7372448460567400023, guid: 9d6359961b1459a4cb3cc9d2413318f3, type: 3}
+  launchSpeed: 8
+  launchDelay: 0.5

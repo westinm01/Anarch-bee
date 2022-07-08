@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallLauncher : MonoBehaviour
 {
-    [SerializeField] GameObject paddle;
+    [SerializeField] GameObject ball;
 
     [SerializeField] float launchSpeed = 8f;
     [SerializeField] float launchDelay = 0.5f;
@@ -15,11 +15,7 @@ public class BallLauncher : MonoBehaviour
 
     void Update()
     {
-        if (!ballLaunched)
-        {
-            transform.position = new Vector3(paddle.transform.position.x, paddle.transform.position.y + 1f, 0f);
-        }
-
+        // Launch Ball and Begin Delay When Key Pressed
         if((Input.GetKeyDown(KeyCode.B) || Input.GetMouseButtonDown(0)) && delayOver)
         {
             LaunchBall();
@@ -27,11 +23,14 @@ public class BallLauncher : MonoBehaviour
         }
     }
 
+    // Launches Ball Randomly Upwards
     private void LaunchBall()
     {
         ballLaunched = true;
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), launchSpeed);
+        GameObject newBall = Instantiate(ball, new Vector3(transform.position.x, transform.position.y + 1f, 0f), Quaternion.identity);
+
+        newBall.GetComponent<Rigidbody2D>().velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), launchSpeed);
     }
 
     public bool GetBallLaunched()
@@ -39,6 +38,7 @@ public class BallLauncher : MonoBehaviour
         return ballLaunched;
     }
 
+    // Creates a Delay Until the Next Ball Can Be Launched
     IEnumerator DelayNextLaunch()
     {
         delayOver = false;
