@@ -26,7 +26,6 @@ public class PauseGame : MonoBehaviour
         else 
         {
             Time.timeScale = 1;
-            
         }
     }
 
