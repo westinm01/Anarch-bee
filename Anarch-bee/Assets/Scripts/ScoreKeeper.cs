@@ -11,6 +11,7 @@ public class ScoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FindObjectOfType<TMP_Text>();
         scoreText.text = "Score: " + score.ToString();
     }
 
