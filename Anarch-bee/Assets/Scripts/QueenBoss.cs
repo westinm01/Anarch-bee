@@ -6,6 +6,8 @@ public class QueenBoss : MonoBehaviour
 {
     public int health = 30;
     private float colorTimer = 0;
+    [SerializeField]
+    private Color damageColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class QueenBoss : MonoBehaviour
 
     public void getDamaged(){
         health--;
-        GetComponent<SpriteRenderer>().color = Color.red;
+        GetComponent<SpriteRenderer>().color = damageColor;
         Debug.Log("Hit!");
         colorTimer = 0.1f;
     }
