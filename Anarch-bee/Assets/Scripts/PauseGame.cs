@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,18 +37,29 @@ public class PauseGame : MonoBehaviour
             case 1://levelOver menu
             levelOver.SetActive(true);
             Time.timeScale = 0f;
+            DeenableControls();
             break;
             case 2: //gameOver menu
             gameOver.SetActive(true);
             Time.timeScale = 0f;
+            DeenableControls();
             break;
-            case 3:
+            case 3: //win menu
             winScreen.SetActive(true);
             Time.timeScale = 0f;
+            DeenableControls();
             break;
         }
         
     }
+
+    private void DeenableControls()
+    {
+        FindObjectOfType<Paddle>().enabled = false;
+        FindObjectOfType<BallLauncher>().enabled = false;
+
+    }
+
     public void setGameIsPaused(bool val)
     {
         gameIsPaused = val;

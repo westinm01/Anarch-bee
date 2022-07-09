@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 00000'
+  m_text: 00000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa8c1590b7f04a40958205513a83084, type: 2}
   m_sharedMaterial: {fileID: -3790527472065963168, guid: 0aa8c1590b7f04a40958205513a83084, type: 2}
@@ -386,7 +386,7 @@ RectTransform:
   - {fileID: 452550698}
   - {fileID: 810782896}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
