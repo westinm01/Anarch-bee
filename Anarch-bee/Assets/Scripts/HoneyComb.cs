@@ -26,15 +26,15 @@ public class HoneyComb : MonoBehaviour
         
         if (collision.gameObject.tag == "Bee")
         {
-           // Destroy(collision.gameObject); //might destroy the entire tilemap...
-           // eventSystemTileCount.currentAmount--;
-           Vector3 hitPosition = Vector3.zero;
+            FindObjectOfType<ScoreKeeper>().addBlockScore();
+            // Destroy(collision.gameObject); //might destroy the entire tilemap...
+            // eventSystemTileCount.currentAmount--;
+            Vector3 hitPosition = Vector3.zero;
            foreach (ContactPoint2D hit in collision.contacts)
            {
                 hitPosition.x = hit.point.x - 0.01f;
                 hitPosition.y = hit.point.y - 0.01f;
                 destructableTilemap.SetTile(destructableTilemap.WorldToCell(hitPosition), null);
-                
            }
         }
     }

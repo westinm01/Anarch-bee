@@ -41,4 +41,9 @@ public class Countdown : MonoBehaviour
             
         }
     }
+
+    public int GetTime()
+    {
+        return currentTime;
+    }
 }
