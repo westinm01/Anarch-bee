@@ -48,6 +48,8 @@ public class PauseGame : MonoBehaviour
             winScreen.SetActive(true);
             Time.timeScale = 0f;
             DeenableControls();
+                // line below has a bug, update in other TileCount keeps calling this so score adding infinitely
+            // FindObjectOfType<ScoreKeeper>().addBeeScore();
             break;
         }
         
