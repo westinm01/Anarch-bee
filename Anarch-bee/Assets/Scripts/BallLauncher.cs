@@ -31,6 +31,9 @@ public class BallLauncher : MonoBehaviour
         GameObject newBall = Instantiate(ball, new Vector3(transform.position.x, transform.position.y + 1f, 0f), Quaternion.identity);
 
         newBall.GetComponent<Rigidbody2D>().velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), launchSpeed);
+
+        InventoryManager iterator = FindObjectOfType<InventoryManager>();
+        iterator.subBees(1);
     }
 
     public bool GetBallLaunched()
