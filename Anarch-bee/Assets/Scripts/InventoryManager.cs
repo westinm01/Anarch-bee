@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count.text = "Bees: " + beeNumber.ToString();
+        count.text = beeNumber.ToString();
     }
 
     public void subBees(int amount){
