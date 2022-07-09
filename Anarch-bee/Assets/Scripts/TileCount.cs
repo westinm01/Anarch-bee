@@ -6,24 +6,29 @@ using UnityEngine.Tilemaps;
 public class TileCount : MonoBehaviour
 {
     public Tilemap tiles;
-    public int currentAmount;
+    /* public int currentAmount;
 
     // Start is called before the first frame update
     void Start()
     {
         currentAmount = GetTileAmount();
-    }
+    } */
 
-    // Update is called once per frame
+
     void Update()
     {
-        Debug.Log(currentAmount);
+        if(tiles.GetUsedTilesCount() <= 0)
+        {
+            GetComponent<PauseGame>().Pause(3);//call win
+        }
+
+        /* Debug.Log(currentAmount);
         if(currentAmount <=0)
         {
             GetComponent<PauseGame>().Pause(3);//call win.
-        }
+        } */
     }
-     public int GetTileAmount()
+     /* public int GetTileAmount()
     {
      tiles.CompressBounds(); // To only read the tiles that we have painted
      int amount = 0;
@@ -34,5 +39,5 @@ public class TileCount : MonoBehaviour
      }
 
      return amount;
- }
+ }*/ 
 }

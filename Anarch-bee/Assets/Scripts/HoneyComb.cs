@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class HoneyComb : MonoBehaviour
 {
     public Tilemap destructableTilemap;
-    public TileCount eventSystemTileCount;
+   //  public TileCount eventSystemTileCount;
     public Grid grid;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class HoneyComb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -27,7 +27,7 @@ public class HoneyComb : MonoBehaviour
         if (collision.gameObject.tag == "Bee")
         {
            // Destroy(collision.gameObject); //might destroy the entire tilemap...
-           eventSystemTileCount.currentAmount--;
+           // eventSystemTileCount.currentAmount--;
            Vector3 hitPosition = Vector3.zero;
            foreach (ContactPoint2D hit in collision.contacts)
            {
