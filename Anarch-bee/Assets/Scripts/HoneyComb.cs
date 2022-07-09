@@ -26,7 +26,6 @@ public class HoneyComb : MonoBehaviour
         
         if (collision.gameObject.tag == "Bee")
         {
-           // Destroy(collision.gameObject); //might destroy the entire tilemap...
            eventSystemTileCount.currentAmount--;
            Vector3 hitPosition = Vector3.zero;
            foreach (ContactPoint2D hit in collision.contacts)
