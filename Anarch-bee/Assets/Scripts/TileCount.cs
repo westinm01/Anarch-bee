@@ -32,7 +32,7 @@ public class TileCount : MonoBehaviour
          Tile tile = tiles.GetTile<Tile>(pos);
          if(tile != null) { amount += 1; }
      }
-     
+
      return amount;
  }
 }
