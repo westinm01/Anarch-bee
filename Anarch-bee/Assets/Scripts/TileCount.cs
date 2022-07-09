@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class TileCount : MonoBehaviour
 {
-    public Tilemap tiles;
+    Tilemap tiles;
     /* public int currentAmount;
 
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class TileCount : MonoBehaviour
 
     void Update()
     {
+        tiles = FindObjectOfType<Tilemap>();
         if(tiles.GetUsedTilesCount() <= 0)
         {
             GetComponent<PauseGame>().Pause(3);//call win
