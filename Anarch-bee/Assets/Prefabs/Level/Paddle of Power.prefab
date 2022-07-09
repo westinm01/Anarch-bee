@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6989756819826924141}
   - component: {fileID: 6989756819826924138}
-  - component: {fileID: 6989756819826924139}
   - component: {fileID: 6989756819826924136}
   - component: {fileID: 1993843327}
+  - component: {fileID: 1268355890}
   m_Layer: 0
   m_Name: Paddle of Power
   m_TagString: Untagged
@@ -29,11 +29,11 @@ Transform:
   m_GameObject: {fileID: 6989756819826924137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6989756819826924138
 SpriteRenderer:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2fbd0cad4ed33764ba1dc147de77a28e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2bdca39471b8c814a8809d73b4ed192b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6989756819826924139
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6989756819826924137}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 59181fe47e72a334f963496b346c585a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.000000029802322}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0390625, y: 0.125}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0319271, y: 0.118269265}
-  m_EdgeRadius: 0
 --- !u!114 &6989756819826924136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,3 +116,35 @@ MonoBehaviour:
   ball: {fileID: 7372448460567400023, guid: 9d6359961b1459a4cb3cc9d2413318f3, type: 3}
   launchSpeed: 8
   launchDelay: 0.5
+--- !u!60 &1268355890
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6989756819826924137}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 59181fe47e72a334f963496b346c585a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.66, y: 0.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.0853893, y: 0.16693458}
+      - {x: -1.3299999, y: -0.14155751}
+      - {x: -1.3299999, y: -0.16}
+      - {x: 1.3299999, y: -0.16}
+      - {x: 1.3345631, y: -0.13129005}
+      - {x: 1.0961163, y: 0.1652149}
+  m_UseDelaunayMesh: 0
