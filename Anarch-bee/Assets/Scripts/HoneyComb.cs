@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class HoneyComb : MonoBehaviour
 {
     public Tilemap destructableTilemap;
+    public TileCount eventSystemTileCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class HoneyComb : MonoBehaviour
                 hitPosition.x = hit.point.x - 0.01f * hit.normal.x;
                 hitPosition.y = hit.point.y - 0.01f * hit.normal.y;
                 destructableTilemap.SetTile(destructableTilemap.WorldToCell(hitPosition), null);
+                eventSystemTileCount.currentAmount--;
            }
         }
     }

@@ -8,6 +8,7 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject levelOver;
     public GameObject gameOver;
+    public GameObject winScreen;
 
     void Update()
     {
@@ -38,6 +39,10 @@ public class PauseGame : MonoBehaviour
             break;
             case 2: //gameOver menu
             gameOver.SetActive(true);
+            Time.timeScale = 0f;
+            break;
+            case 3:
+            winScreen.SetActive(true);
             Time.timeScale = 0f;
             break;
         }
