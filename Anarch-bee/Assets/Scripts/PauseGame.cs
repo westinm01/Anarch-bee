@@ -16,6 +16,10 @@ public class PauseGame : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
+    }
+
+    private void Start()
+    {
         FindObjectOfType<HideUIShowUI>().ShowUI();
     }
     void Update()
