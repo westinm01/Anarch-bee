@@ -12,6 +12,7 @@ public class QueenWin : MonoBehaviour
         if(queen.currentHealth<=0)
         {
             FindObjectOfType<PauseGame>().Pause(3);
+            Debug.Log("Queen Dead");
         }
     }
 }
