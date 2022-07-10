@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class WebComb : MonoBehaviour
 {
-    private List<GameObject> trappedBees;
-    private List<float> timers;
-    private List<Vector3> beeVelocities;
+    private List<GameObject> trappedBees = new List<GameObject>();
+    private List<float> timers = new List<float>();
+    private List<Vector3> beeVelocities = new List<Vector3>();
+    public Vector3 releaseVelocity = new Vector3();
+    public bool preserveVelocity = false;
     public float stuckTime = 5f;
     private float timePassed;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,10 @@ public class WebComb : MonoBehaviour
                 if(timers[i] <= 0)
                 {
                     ReleaseBee(i);
+                    if(i >= timers.Count)
+                    {
+                        break;
+                    }
                 }
             }
         }
@@ -37,9 +44,15 @@ public class WebComb : MonoBehaviour
         if (collision.gameObject.tag == "Bee")
         {
             //need to store velocity
-            Vector3 vel = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
-            beeVelocities.Add(vel);
+            if(preserveVelocity)
+            {
+                Vector3 vel = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
+                beeVelocities.Add(vel);
+            }
+            
+            
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
+            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             //now it's stuck!
             trappedBees.Add(collision.gameObject);
             timers.Add(stuckTime);
@@ -49,9 +62,18 @@ public class WebComb : MonoBehaviour
     
     void ReleaseBee(int index)
     {
-        trappedBees[index].GetComponent<Rigidbody2D>().velocity = beeVelocities[index];
+        trappedBees[index].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;;
+        if(preserveVelocity)
+        {
+            trappedBees[index].GetComponent<Rigidbody2D>().velocity = beeVelocities[index]; //currently kind of buggy
+            beeVelocities.RemoveAt(index);
+        }
+        else{
+            trappedBees[index].GetComponent<Rigidbody2D>().velocity = releaseVelocity;
+        }
+
         trappedBees.RemoveAt(index);
         timers.RemoveAt(index);
-        beeVelocities.RemoveAt(index);
+        
     }
 }
