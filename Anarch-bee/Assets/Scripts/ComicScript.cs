@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ComicScript : MonoBehaviour
 {
+    [SerializeField] GameObject sceneLoaderButton;
     [SerializeField] Sprite[] comicPics;
     [SerializeField] AudioClip[] playAudioOnPics;
     //[Header("Shake Screen On Pic")]
@@ -29,12 +30,9 @@ public class ComicScript : MonoBehaviour
             }
             if(currentPic + 1 == comicPics.Length)
             {
-                FindObjectOfType<TextFadeOut>().FadeTextIn();
+                sceneLoaderButton.SetActive(true);
             }
-        } else if(Input.GetMouseButtonDown(0) && ((currentPic + 1) == comicPics.Length))
-        {
-            FindObjectOfType<SceneLoader>().LoadNextScene();
-        } 
+        }
         GetComponent<SpriteRenderer>().sprite = comicPics[currentPic];
 
     }
