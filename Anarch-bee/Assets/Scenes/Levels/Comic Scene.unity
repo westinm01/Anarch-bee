@@ -723,11 +723,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 8300000, guid: b3c2066c2c92e2e4994edf114b9c7365, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  shakeScreenOnPics: 0707070707070707070707
+  shakeScreenOnPics: 0000000000000007000000
   shakeIntensity: 10
   shakeFrequency: 0.5
   shakeDuration: 0.8
