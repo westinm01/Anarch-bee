@@ -12,6 +12,10 @@ public class PauseGame : MonoBehaviour
     public GameObject winScreen;
     bool levelIsOver = false;
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
