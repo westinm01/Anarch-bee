@@ -5,13 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MockLevel1.unity
     guid: f0f93ad2746228b4d9ac14e02ace9d1f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainNiko.unity
     guid: 4c6f756c2ea63be418d0f6cc3c7bf6ec
+  - enabled: 1
+    path: Assets/Scenes/FrontMenu.unity
+    guid: cdc3259f11eded64ba91cc93c38a8242
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 775924ec5eacf074a8b1bfd3d727937a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: bedf4a54a32283546b83d0c276a54259
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: f05571f83b69ae54da587cceaa04d304
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: 28936ff4b1c08724aa72b280a83b5a14
+  - enabled: 1
+    path: Assets/Scenes/Levels/QueenBeeBoss.unity
+    guid: 185c841556200cf42a2a6f6f6c2fa4d6
   m_configObjects: {}
