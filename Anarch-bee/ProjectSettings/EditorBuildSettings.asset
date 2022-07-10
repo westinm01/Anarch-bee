@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/QueenBeeBoss.unity
     guid: 185c841556200cf42a2a6f6f6c2fa4d6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Ending Comic Scene.unity
+    guid: 1283e23511cf9154bb5e064f5e471dd7
   m_configObjects: {}
