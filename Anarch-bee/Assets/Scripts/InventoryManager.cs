@@ -19,6 +19,11 @@ public class InventoryManager : MonoBehaviour
       beeNumber -= amount;
     }
 
+    public void setBeeNumber(int amount)
+    {
+        beeNumber = amount;
+    }
+    
     public int GetRemainingBees()
     {
         return beeNumber;
