@@ -18,7 +18,7 @@ public class TileCount : MonoBehaviour
 
     void Update()
     {
-        if(tiles = null)
+        if(tiles == null)
         {
             return;
         }
