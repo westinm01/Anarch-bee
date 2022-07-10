@@ -4715,6 +4715,30 @@ PrefabInstance:
       propertyPath: m_text
       value: 160
       objectReference: {fileID: 0}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1103861066, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: subBees
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InventoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866559043966176637, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5561898545372352322, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
       propertyPath: m_Name
       value: Game Canvas
