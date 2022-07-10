@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Intro Comic Scene.unity
     guid: 3d19836b6de8e8646b67039ec0a77d96
   - enabled: 1
+    path: Assets/Scenes/Levels/Tutorial Comic.unity
+    guid: 373dacd037f3f304ba24a8fb5df7377d
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 775924ec5eacf074a8b1bfd3d727937a
   - enabled: 1
