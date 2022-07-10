@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class TileCount : MonoBehaviour
 {
-    Tilemap tiles;
+    [SerializeField] Tilemap tiles;
+    [SerializeField] TileBase[] TilesToCheck;
     /* public int currentAmount;
 
     // Start is called before the first frame update
@@ -17,9 +18,18 @@ public class TileCount : MonoBehaviour
 
     void Update()
     {
-        tiles = FindObjectOfType<Tilemap>();
-        if(tiles.GetUsedTilesCount() <= 0)
+        bool empty = true;
+        foreach (TileBase t in TilesToCheck)
         {
+            if (tiles.ContainsTile(t))
+            {
+                empty = false;
+            }
+            
+        }
+        if(empty)
+        {
+            Debug.Log("Win!");
             GetComponent<PauseGame>().Pause(3);//call win
         }
 
