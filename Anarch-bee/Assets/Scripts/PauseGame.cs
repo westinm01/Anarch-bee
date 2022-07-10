@@ -16,6 +16,7 @@ public class PauseGame : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
+        FindObjectOfType<HideUIShowUI>().ShowUI();
     }
     void Update()
     {
@@ -73,6 +74,7 @@ public class PauseGame : MonoBehaviour
     private void HideOtherUI()
     {
         timer.SetActive(false);
+        FindObjectOfType<HideUIShowUI>().HideUI();
     }
 
     private void DeenableControls()
