@@ -10,6 +10,7 @@ public class HoneyComb : MonoBehaviour
    //  public TileCount eventSystemTileCount;
     public Grid grid;
     [SerializeField] GameObject honeyExplosionVFX;
+    [SerializeField] GameObject particleBurstVFX;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class HoneyComb : MonoBehaviour
                 destructableTilemap.SetTile(destructableTilemap.WorldToCell(hitPosition), null);
            }
             Instantiate(honeyExplosionVFX, hitPosition, Quaternion.identity);
+            Instantiate(particleBurstVFX, hitPosition, Quaternion.identity);
         }
     }
 }
