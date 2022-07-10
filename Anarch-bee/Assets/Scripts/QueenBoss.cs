@@ -5,13 +5,14 @@ using UnityEngine;
 public class QueenBoss : MonoBehaviour
 {
     public int health = 30;
+    public int currentHealth = 30;
     private float colorTimer = 0;
     [SerializeField]
     private Color damageColor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = health;
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class QueenBoss : MonoBehaviour
     }
 
     public void getDamaged(){
-        health--;
+        currentHealth--;
         GetComponent<SpriteRenderer>().color = damageColor;
         Debug.Log("Hit!");
         colorTimer = 0.1f;
