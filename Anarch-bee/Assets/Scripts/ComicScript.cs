@@ -27,6 +27,9 @@ public class ComicScript : MonoBehaviour
             {
                 Camera.main.GetComponent<AudioSource>().PlayOneShot(playAudioOnPics[currentPic]);
             }
+        } else if(Input.GetMouseButtonDown(0) && ((currentPic + 1) == comicPics.Length))
+        {
+            FindObjectOfType<SceneLoader>().LoadNextScene();
         }
         GetComponent<SpriteRenderer>().sprite = comicPics[currentPic];
 
