@@ -10,6 +10,7 @@ public class PauseGame : MonoBehaviour
     public GameObject levelOver;
     public GameObject gameOver;
     public GameObject winScreen;
+    public GameObject timer;
     bool levelIsOver = false;
 
     private void Awake()
@@ -48,22 +49,30 @@ public class PauseGame : MonoBehaviour
             levelOver.SetActive(true);
             Time.timeScale = 0f;
             DeenableControls();
+            HideOtherUI();
             break;
             case 2: //gameOver menu
             levelIsOver = true;
             gameOver.SetActive(true);
             Time.timeScale = 0f;
             DeenableControls();
+            HideOtherUI();
             break;
             case 3: //win menu
             levelIsOver = true;
             winScreen.SetActive(true);
             Time.timeScale = 0f;
             DeenableControls();
-            FindObjectOfType<ScoreKeeper>().addBeeScore();
+            FindObjectOfType<ScoreBreakdown>().BreakdownScore();
+            HideOtherUI();
             break;
         }
         
+    }
+
+    private void HideOtherUI()
+    {
+        timer.SetActive(false);
     }
 
     private void DeenableControls()

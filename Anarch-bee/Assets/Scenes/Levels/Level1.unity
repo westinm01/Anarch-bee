@@ -2803,6 +2803,10 @@ PrefabInstance:
       propertyPath: tiles
       value: 
       objectReference: {fileID: 190669309}
+    - target: {fileID: 5466512400984060153, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5561898545372352322, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
       propertyPath: m_Name
       value: Game Canvas
