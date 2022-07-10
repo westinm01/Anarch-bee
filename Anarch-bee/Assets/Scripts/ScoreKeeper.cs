@@ -36,4 +36,9 @@ public class ScoreKeeper : MonoBehaviour
     {
         score = 0;
     }
+
+    public int GetTotalPoints()
+    {
+        return score;
+    }
 }
