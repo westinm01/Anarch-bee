@@ -17,6 +17,11 @@ public class PauseGame : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+
+    private void Start()
+    {
+        FindObjectOfType<HideUIShowUI>().ShowUI();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -73,6 +78,7 @@ public class PauseGame : MonoBehaviour
     private void HideOtherUI()
     {
         timer.SetActive(false);
+        FindObjectOfType<HideUIShowUI>().HideUI();
     }
 
     private void DeenableControls()

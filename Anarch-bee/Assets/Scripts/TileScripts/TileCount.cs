@@ -18,6 +18,10 @@ public class TileCount : MonoBehaviour
 
     void Update()
     {
+        if(tiles == null)
+        {
+            return;
+        }
         bool empty = true;
         foreach (TileBase t in TilesToCheck)
         {
