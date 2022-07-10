@@ -5,7 +5,7 @@ using TMPro;
 
 public class TextFadeOut : MonoBehaviour
 {
-    [SerializeField] float fadeOutTime = 1f;
+    [SerializeField] float fadeOutAndInTime = 1f;
 
     bool fadedOut = false;
     // Update is called once per frame
@@ -13,7 +13,7 @@ public class TextFadeOut : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !fadedOut)
         {
-            StartCoroutine(FadeTextToZeroAlpha(fadeOutTime, GetComponent<TMP_Text>()));
+            StartCoroutine(FadeTextToZeroAlpha(fadeOutAndInTime, GetComponent<TMP_Text>()));
         }
     }
     public IEnumerator FadeTextToZeroAlpha(float t, TMP_Text i)
@@ -38,6 +38,6 @@ public class TextFadeOut : MonoBehaviour
 
     public void FadeTextIn()
     {
-        StartCoroutine(FadeTextToFullAlpha(1f, GetComponent<TMP_Text>()));
+        StartCoroutine(FadeTextToFullAlpha(fadeOutAndInTime, GetComponent<TMP_Text>()));
     }
 }
