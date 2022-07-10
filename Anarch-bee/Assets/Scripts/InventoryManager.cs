@@ -5,7 +5,7 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-
+    int defaultBeeNumber = 100;
     int beeNumber = 100;
     [SerializeField] TMP_Text count;
 
@@ -31,5 +31,10 @@ public class InventoryManager : MonoBehaviour
     public int GetRemainingBees()
     {
         return beeNumber;
+    }
+
+    public void ResetBees()
+    {
+        beeNumber = defaultBeeNumber;
     }
 }

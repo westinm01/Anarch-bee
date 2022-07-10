@@ -32,7 +32,7 @@ public class ScoreKeeper : MonoBehaviour
         score += FindObjectOfType<Countdown>().GetTime() * secondValue;
     }
 
-    public void resetScore()
+    public void ResetScore()
     {
         score = 0;
     }
