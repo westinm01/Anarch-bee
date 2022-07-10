@@ -9,9 +9,9 @@ public class QueenWin : MonoBehaviour
     
     void Update()
     {
-        if(queen.health<=0)
+        if(queen.currentHealth<=0)
         {
-            GetComponent<PauseGame>().Pause(3);
+            FindObjectOfType<PauseGame>().Pause(3);
         }
     }
 }
