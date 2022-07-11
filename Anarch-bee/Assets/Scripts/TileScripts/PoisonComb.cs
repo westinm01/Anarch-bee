@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PoisonComb : MonoBehaviour
 {
+    [SerializeField] AudioClip beePoisonSFX;
     void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -11,8 +12,9 @@ public class PoisonComb : MonoBehaviour
         {
 
             Destroy(collision.gameObject);
-            
+
             //and play sound
+            AudioSource.PlayClipAtPoint(beePoisonSFX, Vector3.zero);
         }
     }
 }

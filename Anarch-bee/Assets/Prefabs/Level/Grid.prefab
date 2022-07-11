@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255f5deef379c7546bb43283ec2fad77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beePoisonSFX: {fileID: 8300000, guid: b09ebd735ec3a4545a7dd1d578da04bd, type: 3}
 --- !u!1 &177920757086037387
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +562,7 @@ MonoBehaviour:
   releaseVelocity: {x: 0, y: 0, z: 0}
   preserveVelocity: 1
   stuckTime: 5
+  beeWebSFX: {fileID: 8300000, guid: ae55066904584e448b728a239d9707f7, type: 3}
 --- !u!1 &4919418862043554006
 GameObject:
   m_ObjectHideFlags: 0
