@@ -14,11 +14,14 @@ public class Countdown : MonoBehaviour
     //[SerializeField]
     private TextMeshProUGUI timerText;
 
+    private InventoryManager iterator;
+
     // Start is called before the first frame update
     void Start()
     {
         timerText = GetComponent<TextMeshProUGUI>();
         currentTime = int.Parse(timerText.text);
+        iterator = FindObjectOfType<InventoryManager>();
         //timerText.text = startTime.ToString();
     }
 
@@ -33,9 +36,14 @@ public class Countdown : MonoBehaviour
             timerText.text = currentTime.ToString();
             if(currentTime <= 0){
                 //call game over
+                if(iterator.GetRemainingBees() > 9)
+                {
+                    gameCanvasPauseGame.Pause(1);
+                }
+                else{
+                    gameCanvasPauseGame.Pause(2);
+                }
                 
-                //also call gameOverScreen.
-                gameCanvasPauseGame.Pause(1);
                 
             }
             

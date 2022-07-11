@@ -173,6 +173,12 @@ MonoBehaviour:
   destructableTilemap: {fileID: 1623570239}
   grid: {fileID: 3541555873495680111}
   honeyExplosionVFX: {fileID: 7393171010621781349, guid: 410f4b8730166de4f9e8ffc8a965b5f9, type: 3}
+  particleBurstVFX: {fileID: 7699860478352000113, guid: 5343d8f0d1cc063409b94a0a1c107632, type: 3}
+  blockSFX:
+  - {fileID: 8300000, guid: 18f3ee5733692f648b08205cf2ff5514, type: 3}
+  - {fileID: 8300000, guid: 697e571882d15d34b9aea31ec39f9ae9, type: 3}
+  - {fileID: 8300000, guid: e91869dd58af31440bcefd0221056528, type: 3}
+  - {fileID: 8300000, guid: e684c584cca817a41bb0573df75b7839, type: 3}
 --- !u!19719996 &1623570236
 TilemapCollider2D:
   m_ObjectHideFlags: 0

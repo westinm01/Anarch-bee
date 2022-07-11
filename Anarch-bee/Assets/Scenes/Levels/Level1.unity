@@ -2623,6 +2623,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1993843327, guid: 6fe1f83f942c24343b52c16cd23d2c62, type: 3}
+      propertyPath: zeroBeeButton
+      value: 
+      objectReference: {fileID: 1589645278}
     - target: {fileID: 6989756819826924137, guid: 6fe1f83f942c24343b52c16cd23d2c62, type: 3}
       propertyPath: m_Name
       value: Paddle of Power
@@ -2777,6 +2781,34 @@ PrefabInstance:
     - target: {fileID: 8458978259414476693, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1589645277}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663568269084952721, guid: 21f8164af85cb0148b260217e54f2f9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -3256,6 +3288,22 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+--- !u!114 &1589645277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 734980285, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+  m_PrefabInstance: {fileID: 1589645276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1946fca7aa50944b93f89d31e27772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1589645278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2907249317346943331, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+  m_PrefabInstance: {fileID: 1589645276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669054079
 GameObject:
   m_ObjectHideFlags: 0
