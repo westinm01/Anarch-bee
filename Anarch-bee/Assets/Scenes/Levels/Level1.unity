@@ -141,6 +141,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1623570237, guid: 5801c3ff840991b4581c02cbfa4be8c4, type: 3}
+      propertyPath: particleBurstVFX
+      value: 
+      objectReference: {fileID: 7699860478352000113, guid: 5343d8f0d1cc063409b94a0a1c107632, type: 3}
     - target: {fileID: 1623570239, guid: 5801c3ff840991b4581c02cbfa4be8c4, type: 3}
       propertyPath: m_Size.x
       value: 5
