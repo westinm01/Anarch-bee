@@ -155,7 +155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1108,10 +1108,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 26123af38b5eeca4fb6c6cde3b1efd73, type: 3}
   - {fileID: 0}
   playAudioOnPics:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 773dffd6e4a17e44999d61149ce8de57, type: 3}
+  - {fileID: 8300000, guid: 7409aef02a45b2e44bbf75e59c04fcd9, type: 3}
+  - {fileID: 8300000, guid: 1eccca307b90c274d808e1d129ca3950, type: 3}
+  - {fileID: 8300000, guid: 33b371948e3e82044a26c9e35ea086ee, type: 3}
   - {fileID: 0}
   shakeScreenOnPics: 0000000000
   shakeIntensity: 10

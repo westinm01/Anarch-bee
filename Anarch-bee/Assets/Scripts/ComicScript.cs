@@ -16,6 +16,15 @@ public class ComicScript : MonoBehaviour
 
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        if(playAudioOnPics[currentPic] != null)
+        {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(playAudioOnPics[currentPic]);
+        }
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && (currentPic + 1 < comicPics.Length))
