@@ -3795,6 +3795,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7428650760754678384, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 508600595}
+    - target: {fileID: 7428650760754678384, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
     - target: {fileID: 8716739230434095287, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3834,6 +3842,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2907249317346943331, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
   m_PrefabInstance: {fileID: 508600592}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &508600595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3165972418686261684, guid: 5b9649907451de54d9cc685aecbb8928, type: 3}
+  m_PrefabInstance: {fileID: 508600592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c35eb5567e9464fa71ff588a219dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &698811550
 PrefabInstance:
   m_ObjectHideFlags: 0
