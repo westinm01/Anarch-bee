@@ -18,5 +18,9 @@ public class musicManager : MonoBehaviour
             regularMusic.SetActive(false);
             queenMusic.SetActive(true);
         }
+        if(currentScene == 8)
+        {
+            Destroy(gameObject);
+        }
     }
 }
