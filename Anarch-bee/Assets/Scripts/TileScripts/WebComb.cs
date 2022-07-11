@@ -11,6 +11,7 @@ public class WebComb : MonoBehaviour
     public bool preserveVelocity = false;
     public float stuckTime = 5f;
     private float timePassed;
+    [SerializeField] AudioClip beeWebSFX;
     
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,7 @@ public class WebComb : MonoBehaviour
             trappedBees.Add(collision.gameObject);
             timers.Add(stuckTime);
             //and play sound
+            AudioSource.PlayClipAtPoint(beeWebSFX, Vector3.zero);
         }
     }
     
